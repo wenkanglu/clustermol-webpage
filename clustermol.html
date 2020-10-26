@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Neo4j4us</title>
+    <title>ClusterMol</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -153,7 +153,7 @@
     .navbar {
         margin-bottom: 0;
         background-color: #011B2A;
-        z-index: 9999;
+        z-index: 99999;
         border: 0;
         font-size: 12px !important;
         line-height: 1.42857143 !important;
@@ -268,9 +268,9 @@
     }
     
     h1 {
-        background-image: url(images/giphy.gif);
-        background-size: cover;
-        color: transparent;
+        /* background-image: url(images/giphy.gif);
+        background-size: cover; */
+        color: teal;
         -moz-background-clip: text;
         -webkit-background-clip: text;
         text-transform: uppercase;
@@ -324,7 +324,7 @@
         position: relative;
         float: left;
         overflow: hidden;
-        width: 100%;
+        width: 50%;
         text-align: center;
         height: 368px;
         border: none;
@@ -357,7 +357,7 @@
         height: 50%;
         border-radius: 0 0 5px 5px;
         position: relative;
-        z-index: 9999;
+        z-index: 999;
     }
     
     .profile-card-3 .card-content::before {
@@ -383,7 +383,7 @@
         border: 2px solid rgba(255, 255, 255, 1);
         -webkit-transform: translate(-50%, 0%);
         transform: translate(-50%, 0%);
-        z-index: 99999;
+        z-index: 9999;
     }
     
     .profile-card-3 h2 {
@@ -582,7 +582,7 @@
     }
 </style>
 
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<body id="clustermol" data-spy="scroll" data-target=".navbar" data-offset="60">
 
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -601,14 +601,15 @@
                     <li><a href="#About">System</a></li>
                     <li><a href="#Conclusions">Conclusions</a></li>
                     <li><a href="#Documents">Documents</a></li>
+                    <li><a href="#Team">Team</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="title" style="background-image: url('images/T-BG.jpg')">
-        <h1>NEO4J4US</h1>
-        <hr class="hr-text glow" style="width: 40%; color: black">
+    <div class="title" style="background-image: url('images/T-BG.jpg'); background-position: center top; background-repeat: no-repeat; background-size: 100% 100%; background-attachment: fixed;">
+        <h1>ClusterMol</h1>
+        <hr class="hr-text glow" style="width: 40%; color: white">
     </div>
 
     <!-- Container (About Section) -->
@@ -989,9 +990,24 @@
                     <img src="images/Josh.jpg" alt="profile-image" class="profile" />
                 </div>
                 <div class="card-content">
-                    <h2>Josh Redelinghyus<small>Advisory Component</small></h2>
+                    <h2>Nicholas Limbert<small>Hierarchical | QT</small></h2>
 
                     <div class="icon-block"><a href="https://github.com/joshred/Honours-Project"><i class="fa fa-github"></i></a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card profile-card-3">
+                <div class="background-block">
+                    <img src="images/Ed-BG.jpg" alt="profile-sample1" class="background" />
+                </div>
+                <div class="profile-thumb-block">
+                    <img src="images/Ed.jpg" alt="profile-image" class="profile"/>
+                </div>
+                <div class="card-content">
+                    <h2>Wen Kang Lu<small>HDBSCAN | UMAP</small></h2>
+                    <div class="icon-block"><a href="https://github.com/EdwinKassier/Thesis"><i class="fa fa-github"></i></a></div>
                 </div>
             </div>
         </div>
@@ -1005,7 +1021,7 @@
                     <img src="images/Ed.jpg" alt="profile-image" class="profile" />
                 </div>
                 <div class="card-content">
-                    <h2>Edwin Kassier<small>Prediction Component</small></h2>
+                    <h2>Robyn McKenzie<small>HDBSCAN | iMWKMeans</small></h2>
                     <div class="icon-block"><a href="https://github.com/EdwinKassier/Thesis"><i class="fa fa-github"></i></a></div>
                 </div>
             </div>
@@ -1016,16 +1032,16 @@
     <!-- Footer -->
 
     <footer class="container-fluid text-center bg-grey ">
-        <a href="#myPage" title="To Top">
+        <a href="#clustermol" title="To Top">
             <i class="fa fa-angle-double-up" style="font-size: 32px; color: black;"></i>
         </a>
-        <p>Edwin Kassier & Josh Redelinghyus<br>2019</p>
+        <p>ClusterMol<br>2020</p>
     </footer>
 
     <script>
         $(document).ready(function() {
             // Add smooth scrolling to all links in navbar + footer link
-            $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+            $(".navbar a, footer a[href='#clustermol']").on('click', function(event) {
                 // Make sure this.hash has a value before overriding default behavior
                 if (this.hash !== "") {
                     // Prevent default anchor click behavior
