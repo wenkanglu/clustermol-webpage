@@ -670,46 +670,23 @@
             </div>
             <br>
 
-            <h3>Neo4j Graph Databases</h3>
+            <h3>Nicholas Limbert - HIERARCHICAL | QT</h3>
             <p>
-                To resolve the confusion and administrative complications experienced during registration, curriculum-checking was implemented in both a Neo4j constraint-checking graph and using SQL queries. Next, to provide feedback regarding the performance of other
-                students who registered for similar courses and achieved similar grades, Neo4j similarity algorithms were used alongside more manual SQL queries.
-                <br><br> Data stored in Graph Databases (GDBs) are represented as Directed Graphs consisting of nodes connected by edges. Data which are typically stored as records (rows) in Relational Databases (RDBs) are contained in the nodes. The
-                relationships between records are represented by the edges between nodes - these directed and labelled connections between nodes may too have their own attributes. GDBs are schema-less meaning the design of nodes and edges do not have
-                to be pre-defined. Nodes and edges are all optional i.e. if there is no value for some possible attribute, it will not be stored in that node or edge.
-                <br><br> Query traversals make use of powerful graph algorithms to substantially improve the performance of data retrieval when compared to relational queries. Neo4j claims that a query depth of 100,000 (equivalent to 100,000 relational
-                JOINs) is easily computed in seconds, something RDBs are incapable of. Traversals are implemented using pointers instead of the lookups used in RDBs. Pointers are more efficient than lookups as they provide a direct link to the data required,
-                instead searching which is inevitable in indexing.
-                <br><br> GDBs are designed to effectively manage the growth of data; unlike RDBs, the size of a graph database does not affect the performance of queries. As RDBs increase in size, the performance of large JOIN operations decreases as
-                more data is to be considered. Further, as GDBs are not dependent on schemas, graphs can evolve and scale with the data – no redesigns are required like in RDBs because new relationships and attributes can simply be added. This is not
-                the case in RDBs where the addition of new attributes can often include complex schema redesigns.
-
+                Clustering analysis provides a means to classify similar molecular conformations into a limited number of district groups thereby reducing the amount of information to be manually analysed. A wide variety of readily available clustering algorithms have not been implemented and tested on highly flexible molecules such as carbohydrates.
+                <br><br>
+                Hierarchical clustering is a well-developed clustering technique with numerous resources available. We utilise four different linkage criteria for hierarchical clustering - single, complete, average and Ward’s method. These are standard, widely available methods that provide an intuitive understanding of how clusters are formed.
+                <br><br>
+                The Quality Threshold (QT) algorithm aims to generate high-quality clusters by iteratively adding observations to a cluster while not exceeding the pre-defined cluster diameter or threshold. Observations are added to minimise the cluster diameter. The Quality Threshold (QT) algorithm has previously been implemented for clustering a range of MD data, however, there are some inconsistencies related to certain implementations. We, therefore, aim to make use of the implementation from González-Alemán et al. which is in line with the originally proposed algorithm from Heyer et al. In addition, we make use of a vectorised version by Melvin et al in order to understand their differences and determine the effectiveness.
             </p>
-            <h3>Relational Databases</h3>
+            <h3>Wen Kang Lu - HDBSCAN | UMAP</h3>
             <p>
-                RDBs maintain their data in tables consisting of rows and columns, where items in rows constitute unique data objects and column values are the attributes of that data. Data which are inherently structured are most logically stored in organised and structured
-                tables.
-                <br><br> Data stored in RDBs are governed by a schema - a set of predefined rules which specify the structure of the tables storing the data and the relationships between them. Rows are uniquely identified by their primary keys which are
-                fundamental in defining the relationships between tables. Data stored in these tables are often normalised to various degrees (when the database is altered to remove repetitions of data). When a relational database is queried JOINs are
-                often required; this process compares columns from two separate tables and produces a new table of results filtered on a query criterion.
-                <br><br> In general, the performance of RDBs decreases as the volume of data stored increases. This degradation is explained by the nature of JOINs as more data are stored, more comparisons are required. In a database with one million
-                records, a query containing five JOINs will result in billions of results to compare which is infeasible. Denormalization can be introduced to reduce the number of JOINs and indexes required but this complexity can quickly become unmanageable.
+              *ToDo*
             </p>
-            <h3>Neo4j and its use in Machine Learning</h3>
-            <p>At present, the literature, does not document any specific challenges that a particular machine learning algorithm, let alone machine learning in general, might experience when integrating graph databases into the machine learning workflow.
-                There is only mention of the increased efficacy a graph database brings to data mining and machine learning.</p>
+            <h3>Robyn McKenzie - HDBSCAN | IMWKMEANS</h3>
+            <p>
+              *ToDo*
+            </p>
 
-            <h3>Bayesian Networks</h3>
-            <p>A Bayesian network, in its truest sense, functions as a Directed Acyclic Graph (DAG) where one node per random variable of the dataset exists. Each node contains a separate conditional probability table that catalogues the probabilities of
-                its occurrence, depending on all outcomes from its parent nodes. The above is performed using the following Bayes theorem as its basis:<br><br> P(A│B)=(P(B│A)*P(A))/(P(B))<br><br> Bayes theorem is a mathematical function that can predict
-                the probability of an event A occurring knowing that an event B occurs. To illustrate the above, the example of three variables in a Bayesian DAG that all have the possibility of being true or false is used: Grass is wet, it is raining,
-                and the sprinkler system is on. “Raining” and “Sprinkler system is on” are parent nodes to “Grass is wet” as they have the potential to affect the probability of it being true or false, depending on their own values. This implies that
-                “grass is wet” will have a conditional probability table cataloguing its own probability of being wet, depending on these parent variable values. <br><br>This classification of relationships between edges is only possible in a select number
-                of simple problems where an expert could reliably provide the relationships between nodes. Bayesian networks then need some mechanism for reliably learning the relationships between large numbers of nodes to ensure reliable prediction
-                for future questions in complex datasets. Bayesian networks perform this by a process called structural learning, where, broadly speaking, the algorithm will infer the relationships between nodes to establish how the conditional probabilities
-                between nodes should change depending on the training data. Once this is completed the system may make predictions using a set of evidence values in a process called inference. Inference uses posterior probability as a method of generating
-                a probability of some event given a set of evidence.
-            </p>
         </div>
     </div>
 
@@ -717,7 +694,7 @@
     <!-- Container (About Section) -->
     <div id="About" class="container-fluid p-0 " style="padding: 3em">
         <div class="heading3">
-            <h3>Advisory Component</h3>
+            <h3>System Design and Overview</h3>
         </div>
         <br>
         <p style="border-left: 3px solid #011B2A;
