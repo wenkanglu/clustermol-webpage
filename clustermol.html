@@ -620,17 +620,11 @@
             </div>
             <br>
             <p style="border-left: 3px solid #011B2A;
-            padding-left: 10px;">Many students struggle to complete their Computer Science (CS) degree in the standard three-year period and face difficulties when registering for degrees with complex requirements. This leads to drop-outs and course repeats which is of concern,
-                seeing that the IT sector in South Africa is experiencing a shortage of skilled graduates. To increase the likelihood of academic success, student morale can be improved by ensuring that they enrol in the courses most suited to them -
-                if a student is advised of errors in their planned curriculum or that that they may not cope, they may plan to change their field of study.</p>
-            <br>
-            <p>To address these problems this project implemented:<br>
+            padding-left: 10px;">Molecular dynamics (MD) simulates the behaviour of molecules which are allowed to interact with one another over a fixed period of time; it outputs what is known as a trajectory of the behaviour observed. This trajectory is a record of the movement of every atom during the simulation, with respective changes in position over time calculated by solving Newton’s equations of motion. Since the effects of molecular interactions occur so rapidly, positions are often updated at the femtosecond timescale. Therefore, trajectories containing even just a few nanoseconds worth of time frames amount to millions of locational data points to observe.
+
+            MD simulations play an important role for researchers interested in the effects molecular conformations can have in their applications, some of which include drug-receptor interaction and protein folding. Consequently, it is imperative that effective methods exist to gather insight from trajectories as efficiently as possible. A common way to do so is through the use of clustering algorithms that can partition the trajectory into a set of dominant conformations that are deemed structurally unique from one another. This project looks to explore different clustering techniques to cluster flexible carbohydrate molecules like polysaccharides.
             </p>
-            <ol>
-                <li> A Prediction component which used a Machine Learning (ML) system built on top of a Neo4j database which analysed student academic performance to indicate the likelihood of a student succeeding in a Computer Science degree.</li>
-                <li>An advisory component which used a Neo4j Student Data graph and graph algorithms to provide feedback on whether the proposed curriculum violated any requirements of their degree and indicated the performance of students with similar grades
-                    and curricula in the past</li>
-            </ol>
+            <br>
         </div>
     </div>
 
@@ -642,21 +636,27 @@
             </div>
             <br>
             <p style="border-left: 3px solid #011B2A;
-            padding-left: 10px;"> The aim of the Neo4j4Us system was to create a tool which would aid UCT CS students when designing their academic curriculum. The principal goal of this system was to notify students of potential problems they may encounter while pursuing
-                their planned degree, as well as their likelihood to succeed with an acceptable degree of accuracy.<br> The resultant outcome of this system would be an increased throughput rate of UCT CS students, while also curbing drop-out.</p>
+            padding-left: 10px;"> We aim to investigate and compare the performance of the various clustering algorithms to identify which are effective in clustering trajectories of flexible molecules, specifically, carbohydrate molecules. In addition, we investigate the use of dimensionality reduction techniques on the trajectory data and whether this improves clustering results. An effective clustering algorithm is one that generates high-quality clusters with good partitioning. This means that the clusters have high intra-cluster similarity and low inter-cluster similarity. Intra-cluster similarity indicates how well a cluster is formed and how similar the objects within a specific cluster are. The inter-cluster similarity is used to determine how dissimilar different clusters are from one another. This is also referred to as cluster separation.
+            We aim to address the following research question. Which clustering algorithms are most effective in clustering Molecular Dynamics (MD) simulation data of highly flexible molecules? Each member has also outlined their individual research questions which pertain specifically to their contribution.
+            </p>
             <br>
-            <p>Edwin - The Prediction Component</p>
+            <p>Nicholas Limbert - HIERARCHICAL | QT</p>
             <ul>
-                <li>To explore how a Bayesian Network (BN) represented graphically in Neo4j can be used to predict the probability of student failure amongst the UCT CS student population using a dataset of past student results as training data. </li>
-                <li>To investigate the accuracy of such an implementation utilising graph databases, as well as exploring how can be improved through more efficient inference algorithms and native Neo4j machine learning functionalities.</li>
+                <li>Which hierarchical clustering method of Ward, maximum, single and average linkage produces the most effective clustering results of MD trajectory data?</li>
+                <li>Is the Quality Threshold Algorithm able to effectively cluster MD simulation data from highly flexible molecules?</li>
 
             </ul>
             <br>
-            <p>Josh - The Advisory Component</p>
+            <p>Wen Kang Lu - HDBSCAN | UMAP</p>
             <ul>
-                <li>To explore if a graph database (Neo4j) is an appropriate means of storing degree-requirements for the constraint-checking of a structured degree.</li>
-                <li>To explore the efficacy of determining similar students using student data stored graphically, through comparisons with a relational database implementation of the same system.</li>
-                <li>To explore how different graph database designs can improve performance of identifying similar student clusters. </li>
+                <li>Is HDBSCAN suitable for clustering MD trajectories?</li>
+                <li>Does the use of a dimensionality reduction technique, UMAP, improve HDBSCAN clustering performance?</li>
+
+            </ul>
+            <br>
+            <p>Robyn McKenzie - HDBSCAN | IMWKMEANS</p>
+            <ul>
+                <li>Given that HDBSCAN and iMWK-Means are both able to handle noise in the data, do these algorithms perform well when clustering trajectories of flexible molecules? Is either of the algorithms more suitable for clustering MD data?</li>
             </ul>
             </p>
         </div>
@@ -990,6 +990,8 @@
                 </div>
             </div>
 
+
+
         </div>
     </div>
     </div>
@@ -1004,15 +1006,15 @@
             </div>
               <div class="card profile-card-3">
                   <div class="background-block">
-                      <img src="images/Josh-BG.jpg" alt="profile-sample1" class="background" />
+                      <img src="images/nic-bg.png" alt="profile-sample1" class="background" />
                   </div>
                   <div class="profile-thumb-block">
-                      <img src="images/Josh.jpg" alt="profile-image" class="profile" />
+                      <img src="images/Nic.jpeg" alt="profile-image" class="profile" />
                   </div>
                   <div class="card-content">
                       <h2>Nicholas Limbert<small>Hierarchical | QT</small></h2>
 
-                      <div class="icon-block"><a href="https://github.com/joshred/Honours-Project"><i class="fa fa-github"></i></a></div>
+                      <div class="icon-block"><a href="https://github.com/nlimb16"><i class="fa fa-github"></i></a></div>
                   </div>
               </div>
             <div class="col-md-4">
