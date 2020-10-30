@@ -269,9 +269,7 @@
 
     h1 {
         /* background-image: url(images/giphy.gif);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center; */
+        background-size: cover; */
         color: teal;
         -moz-background-clip: text;
         -webkit-background-clip: text;
@@ -344,10 +342,10 @@
         width: 100%;
         vertical-align: top;
         opacity: 0.9;
-        /* -webkit-filter: blur(0.5px);
-        filter: blur(0.5px); */
-        /* -webkit-transform: scale(1.2);
-        transform: scale(1.2); */
+        -webkit-filter: blur(0.5px);
+        filter: blur(0.5px);
+        -webkit-transform: scale(1.8);
+        transform: scale(2.8);
     }
 
     .profile-card-3 .card-content {
@@ -618,7 +616,7 @@
     <div id="Intro" class="container-fluid p-0 bg-grey" style="padding: 3em">
         <div class="row no-gutters">
             <div class="heading3">
-                <h3>Introduction</h3>
+                <h3>Project Description</h3>
             </div>
             <br>
             <p style="border-left: 3px solid #011B2A;
@@ -817,35 +815,30 @@
         <div class="row no-gutters">
 
             <div class="heading3">
-                <h3>Results/ Conclusions</h3>
+                <h3>Results and Conclusions</h3>
             </div>
             <br>
 
-            <h3>MySQL is more efficient in smaller datasets</h3>
+            <h3>Multi-data point linkage criteria produce better results compared to single linkage criteria.</h3>
             <p>
-                It was found that for small amounts of student data, graph representation was not required as the MySQL implementation performed better. The more advanced lookups and fewer overheads involved in searching records as opposed to nodes lead to faster performance
-                in every aspect. The smaller data set required no large JOINs and as such, there were no performance advantages of graph traversals over JOINs.
+                Hierarchical clustering is unable to classify noise separately, however, it is still able to produce clusters with relatively good CVI values. A limitation to Hierarchical clustering is that it requires prior knowledge about the number of conformations within a simulation. This information is usually not available unless prior research has been conducted on the specified data set. As expected, single linkage is unable to produce clusters of significance and merges most frames into one cluster. Complete, however can produce reasonable results given that only individual data points are taken into account when merging clusters. Complete also has better CVI values and a greater cluster count spread to those produced by single linkage. Ward’s method and average linkage produce much better results in comparison to single and complete linkages. Linkage criteria (Ward’s and average) that take multiple data points into account produce significantly better results and should be implemented when using Hierarchical clustering.
 
             </p>
-            <h3>Identifying similar students is more efficient in Neo4j in large databases.</h3>
+            <h3>Quality Threshold produces good clusters for highly flexible molecules.</h3>
             <p>
-                However, experimentation on larger datasets showed that when implementing tree-structures, traversing a graph database was far more efficient than JOIN statements in relational tables. The comparison between the larger databases showed that the performance
-                degradation when JOINing massive tables impacted the speed of identifying similar students. Because of the tree structure implemented in Neo4j, the number of student nodes compared was minimised as only the necessary edges between relevant
-                nodes were traversed. In MySQL, millions of records were JOINed and therefore performance suffered.
+                Quality Threshold produces good clusters for highly flexible molecules as is evident from the results obtained for S. flexneri, MenW and to an extent MenY. Notably, results are only informative once the correct cutoff value has been found. Lower cut-off values impose a stricter constraint on the QT variations and produce more noise data. A balance between clusters produced and noise should be determined. Minimising noise by increasing the cut-off value leads to larger clusters containing dissimilar conformations.
             </p>
-            <h3>Storing constraints in a database is too costly.</h3>
-            <p>For a simple list of checks, the complexity involved in developing a constraint checking graph was not justified by fast performance; a chain of if-statements in Java is better suited. However, more complex decision logic (like classification
-                trees etc) is perhaps more suited to graph representation because of the visual benefits of graphs. Neo4j schema independence was advantageous when altering the requirements of the constraint-checking graph because only minor changes need
-                to be made to nodes instead of larger changes required in Java if-statements.</p>
+            <p>
+                It is evident that both QT variants can cluster highly flexible molecules and can produce high-quality clusters with minimal noise albeit the correct cut-off values have to be determined. Selection of a cut-off value should be based on iteratively evaluating different CVI’s while changing the cut-off values. One should evaluate the noise and clusters produced to determine the most suitable cut-off value.This further attests to QT’s existing popularity within the domain of clustering MD data.
+            </p>
+            <h3>Addtional Results #1</h3>
+            <p>ToDo</p>
 
-            <h3>Viability of Neo4j for storing and using Bayesian models</h3>
-            <p>Neo4j proved to be an adequate medium for storing Bayesian Networks, as it provided a set of native structures that mapped well to the structure of Bayesian models. However, beyond the ease of construction Neo4j provides, the advantages of
-                using Neo4j over other databases is not apparent. Further exploration of how Neo4j can be used in the context of storage and use of Bayesian Networks, is needed to fully ascertain how well the Neo4j structure and query engine can be used
-                in this context.</p>
+            <h3>Addtional Results #2</h3>
+            <p>ToDo</p>
 
-            <h3>Achievement of aims</h3>
-            <p>The project has accomplished the aims set out by the project supervisors. This was achieved through the construction of multiple standalone modules, with each module addressing a specific aim. These modules when integrated, met the requirements
-                of the final system.</p>
+            <h3>Addtional Results #3</h3>
+            <p>ToDo</p>
         </div>
     </div>
 
@@ -1005,14 +998,14 @@
             </div>
               <div class="card profile-card-3">
                   <div class="background-block">
-                      <img src="images/gary-bg.jpg" alt="profile-sample1" class="background" />
+                      <img src="images/Ed-BG.jpg" alt="profile-sample1" class="background" />
                   </div>
                   <div class="profile-thumb-block">
-                      <img src="images/gary-profile.jpg" alt="profile-image" class="profile"/>
+                      <img src="images/Ed.jpg" alt="profile-image" class="profile"/>
                   </div>
                   <div class="card-content">
                       <h2>Wen Kang Lu<small>HDBSCAN | UMAP</small></h2>
-                      <div class="icon-block"><a href="https://github.com/wenkanglu"><i class="fa fa-github"></i></a></div>
+                      <div class="icon-block"><a href="https://github.com/EdwinKassier/Thesis"><i class="fa fa-github"></i></a></div>
                   </div>
               </div>
             <div class="col-md-4">
