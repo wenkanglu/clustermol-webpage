@@ -694,54 +694,74 @@
     <!-- Container (About Section) -->
     <div id="About" class="container-fluid p-0 " style="padding: 3em">
         <div class="heading3">
-            <h3>System Design and Overview</h3>
+            <h3>Framework Design</h3>
         </div>
         <br>
-        <p style="border-left: 3px solid #011B2A;
-        padding-left: 10px;">The system was built using two seperate databases: Neo4j, a graph database management system that has been shown to efficiently manage highly-connected data, and MySQL, a relational database. Degree violations were determined using a constraint-checking
-            graph in Neo4j and if-statements in MySQL, while the performance of similar students was calculated using graph similarity algorithms and SQL queries in each database respectively.
-        </p>
-        <br>
         <div class="row no-gutters">
-            <div class="col-md-6 order-md-2" style="background-image: url(images/J-1.png);min-height: 42rem;background-size:contain;background-repeat: no-repeat;">
-            </div>
-            <div class="col-md-6 align-self-center">
-                <h3>Check the Basic Constraints of a Degree Plan</h3>
-                <p>The constraint-checking graph consisted of question nodes which checked the various constraints of the degree and terminal nodes which classified the student’s plan as suitable or unsuitable for a computer science degree. By traversing
-                    through question nodes such as “Do these courses constitute enough credits for the first year of studies?” connected to other question and terminal nodes by “Yes” and “No” edges, errors in the student’s curriculum were found.
-                </p>
-            </div>
+          <div class="col-md-6 align-self-center">
+          <p style="border-left: 3px solid #011B2A;
+            padding-left: 10px;"> We developed a framework whereby the user can specify instructions, including the input file, algorithm and
+            validation index, via command-line arguments. As the result of each clustering algorithm is dependent on the selection of the atoms
+            and frames to be clustered on, the framework includes preprocessing functions, to facilitate this, as well as post-processing
+            functions.
+            <br>
+            The framework is structured as a pipeline to allow for additional algorithms, and other functionality, to be easily implemented at
+            a later stage. It is implemented in Python, as the majority of the existing packages we used are Python libraries. Additionally,
+            Python code is more easily understood than that of many other languages and will be simple to maintain and extend in the future.
+          </p>
+          </div>
+          <div class="col-md-6 order-md-2" style="background-image: url(images/framework.png);min-height: 20rem;background-size:contain;background-repeat: no-repeat;">
+          </div>
         </div>
         <div class="row no-gutters">
-            <div class="col-lg-6 align-self-center">
-                <h3>Report the Performance of Similar Students</h3>
-                <p>Student and academic data were stored in nodes used for similarity queries. These queries found students who are similar to one another by looking at their course enrollments and marks. The average course mark (accompanied by standard
-                    deviation) achieved by the clusters of similar students was then reported as an indication of how similar students fared in the past. Student nodes were connected to course nodes via ENROLLED-IN edges (with the obtained mark as an
-                    attribute). Course nodes were connected to major nodes through REQUIRES edges to store which courses are compulsory for a major.</p>
-            </div>
-            <div class="col-lg-6" style="background-image: url('images/J-2.png');min-height: 42rem;background-size: contain;background-repeat: no-repeat;"></div>
+          <div class="col-lg-6 align-self-center">
+              <h3>Input</h3>
+              <p> The program accepts a Protein Data Bank (.pdb) file as the input dataset. These files contain three-dimensional structures of
+                molecules and their change in conformation over a time period. This project is focused on clustering highly flexible molecules,
+                therefore we will use MD simulation data of carbohydrates. The user will provide the input file name as a command-line argument.
+              </p>
+          </div>
+          <div class="col-lg-6 align-self-center">
+              <h3>Preprocessing</h3>
+              <p> The user may wish to preprocess the files. We implement features which allow atom selection, frame selection and frame
+                downsampling prior to clustering. The user may also generate new trajectory files from existing ones using these preprocessing
+                features. The preprocessing phase outputs the edited trajectory data in the format required by the clustering algorithm
+                implementations.
+                <br>
+                !! TODO Mention that UMAP comes in here !!
+              </p>
+          </div>
         </div>
         <div class="row no-gutters">
-            <div class="col-lg-6" style="background-image: url('images/J-3.png');min-height: 42rem;background-size: cover;background-repeat: no-repeat;"></div>
-            <div class="col-lg-6 order-lg-1 align-self-center">
-                <h3>Experimentation and Comparison with an SQL Implementation</h3>
-                <p>To establish the suitability of Neo4j for this system, comparisons were made against an SQL implementation of the same data. The execution time of the similarity queries on the student data were compared to SQL queries in relational tables.
-                    These comparisons provided evidence to the viability of graph systems for this system and confirmed performance advantages Neo4j has over MySQL.
-                </p>
-            </div>
+          <div class="col-lg-6 align-self-center">
+              <h3>Clustering</h3>
+              <p> The preprocessed data is clustered with the algorithm specified by the user. The user has a range of clustering algorithms to
+                choose from. These include Hierarchical (various linkage criterion), Quality Threshold variations, HDBSCAN and iMWK-Means. All
+                clustering algorithms are configured to accept data in the format output by the preprocessing phase. The clustering output is also
+                uniform across each algorithm implementation so that the validation techniques and visualisation can be used.
+              </p>
+          </div>
+          <div class="col-lg-6 align-self-center">
+              <h3>Validation</h3>
+              <p> There are multiple validation measures available to the user. We recommend using multiple Cluster Validation Indices (CVIs).
+                If the user has specified a CVI, or set of CVIs, to be used, this will be applied to the output and results will be written to
+                a file. We have implemented the Calinski Harabasz, Davies-Bouldin and Silhouette indices as validation measures.
+              </p>
+          </div>
         </div>
         <div class="row no-gutters">
-            <div class="col-lg-6 align-self-center ">
-                <h3>Testing with different database sizes</h3>
-                <p>Initial testing was conducted on a small set of real UCT student data (3,000 students). To explore different graph database designs and retrieve more reliable performance results, new databases were created containing the data of 1,000,000
-                    simulated students. The schema-less nature of Neo4j allowed for a new tree structure to be implemented in the larger graph database to improve the performance of similarity queries. MySQL did not support such a design and the data
-                    remained in tables. The tree structure implemented consisted of Student Root nodes which represented the curriculum shared by many students. All Student nodes which are children of Student Roots shared the same curriculum (represented
-                    by a curriculum hash). Instead of finding similar students by searching all student nodes, the search space is reduced by only evaluating Student Roots. Speed tests on these larger databases yielded more interesting results about the
-                    advantages of representing data graphically.</p>
-            </div>
-            <div class="col-lg-6" style="background-image: url('images/J-4.png');min-height: 42rem;background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+          <div class="col-lg-6 align-self-center">
+              <h3>Clustering Output</h3>
+              <p> The preprocessed data is clustered with the algorithm specified by the user. The user has a range of clustering algorithms to
+                choose from. These include Hierarchical (various linkage criterion), Quality Threshold variations, HDBSCAN and iMWK-Means. All
+                clustering algorithms are configured to accept data in the format output by the preprocessing phase. The clustering output is also
+                uniform across each algorithm implementation so that the validation techniques and visualisation can be used.
+              </p>
+          </div>
+          <div class="col-lg-6 align-self-center">
+          </div>
         </div>
-
+        
         <br>
         <br>
 
@@ -815,7 +835,7 @@
         <div class="row no-gutters">
 
             <div class="heading3">
-                <h3>Results/ Conclusions</h3>
+                <h3>Results and Conclusions</h3>
             </div>
             <br>
 
