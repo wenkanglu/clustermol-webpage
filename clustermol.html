@@ -619,10 +619,18 @@
                 <h3>Project Description</h3>
             </div>
             <br>
-            <p style="border-left: 3px solid #011B2A;
-            padding-left: 10px;">Molecular dynamics (MD) simulates the behaviour of molecules which are allowed to interact with one another over a fixed period of time; it outputs what is known as a trajectory of the behaviour observed. This trajectory is a record of the movement of every atom during the simulation, with respective changes in position over time calculated by solving Newton’s equations of motion. Since the effects of molecular interactions occur so rapidly, positions are often updated at the femtosecond timescale. Therefore, trajectories containing even just a few nanoseconds worth of time frames amount to millions of locational data points to observe.
-
-            MD simulations play an important role for researchers interested in the effects molecular conformations can have in their applications, some of which include drug-receptor interaction and protein folding. Consequently, it is imperative that effective methods exist to gather insight from trajectories as efficiently as possible. A common way to do so is through the use of clustering algorithms that can partition the trajectory into a set of dominant conformations that are deemed structurally unique from one another. This project looks to explore different clustering techniques to cluster flexible carbohydrate molecules like polysaccharides.
+            <p style="border-left: 3px solid #011B2A; padding-left: 10px;">
+                Molecular dynamics (MD) simulates the behaviour of molecules which are allowed to interact with one another over a fixed period of time; it outputs what is known as a trajectory of the behaviour observed.
+                This trajectory is a record of the movement of every atom during the simulation, with respective changes in position over time calculated by solving Newton’s equations of motion.
+                Since the effects of molecular interactions occur so rapidly, positions are often updated at the femtosecond timescale.
+                Therefore, trajectories containing even just a few nanoseconds worth of time frames amount to millions of locational data points to observe.
+           </p>
+           <br>
+           <p style="border-left: 3px solid #011B2A; padding-left: 10px;">
+                MD simulations play an important role for researchers interested in the effects molecular conformations can have in their applications, some of which include drug-receptor interaction and protein folding.
+                Consequently, it is imperative that effective methods exist to gather insight from trajectories as efficiently as possible.
+                A common way to do so is through the use of clustering algorithms that can partition the trajectory into a set of dominant conformations that are deemed structurally unique from one another.
+                This project looks to explore different clustering techniques to cluster flexible carbohydrate molecules like polysaccharides.
             </p>
             <br>
         </div>
@@ -636,8 +644,15 @@
             </div>
             <br>
             <p style="border-left: 3px solid #011B2A;
-            padding-left: 10px;"> We aim to investigate and compare the performance of the various clustering algorithms to identify which are effective in clustering trajectories of flexible molecules, specifically, carbohydrate molecules. In addition, we investigate the use of dimensionality reduction techniques on the trajectory data and whether this improves clustering results. An effective clustering algorithm is one that generates high-quality clusters with good partitioning. This means that the clusters have high intra-cluster similarity and low inter-cluster similarity. Intra-cluster similarity indicates how well a cluster is formed and how similar the objects within a specific cluster are. The inter-cluster similarity is used to determine how dissimilar different clusters are from one another. This is also referred to as cluster separation.
-            We aim to address the following research question. Which clustering algorithms are most effective in clustering Molecular Dynamics (MD) simulation data of highly flexible molecules? Each member has also outlined their individual research questions which pertain specifically to their contribution.
+            padding-left: 10px;"> We aim to investigate and compare the performance of the various clustering algorithms to identify which are effective in clustering trajectories of flexible molecules, specifically, carbohydrate molecules.
+            In addition, we investigate the use of dimensionality reduction techniques on the trajectory data and examine whether this improves clustering results.
+            An effective clustering algorithm is one that generates high-quality clusters with good partitioning.
+            This means that the clusters have high intra-cluster similarity and low inter-cluster similarity.
+            Intra-cluster similarity indicates how well a cluster is formed and how similar the objects within a specific cluster are.
+            The inter-cluster similarity is used to determine how dissimilar different clusters are from one another.
+            This is also referred to as cluster separation.
+            We aim to address the following research question: which clustering algorithms are most effective in clustering MD simulation data of highly flexible molecules?
+            Each member has also outlined their individual research questions which pertain specifically to their contribution.
             </p>
             <br>
             <p>Nicholas Limbert - HIERARCHICAL | QT</p>
@@ -654,9 +669,10 @@
 
             </ul>
             <br>
-            <p>Robyn McKenzie - HDBSCAN | IMWKMEANS</p>
+            <p>Robyn McKenzie - HDBSCAN | IMWK-MEANS</p>
             <ul>
-                <li>Given that HDBSCAN and iMWK-Means are both able to handle noise in the data, do these algorithms perform well when clustering trajectories of flexible molecules? Is either of the algorithms more suitable for clustering MD data?</li>
+                <li>Given that HDBSCAN and iMWK-Means are both able to handle noise in the data, do these algorithms perform well when clustering trajectories of flexible molecules?</li>
+                <li>Is the one algorithm more suited for MD data than the other</li>
             </ul>
             </p>
         </div>
@@ -669,7 +685,6 @@
                 <h3>Background and Context</h3>
             </div>
             <br>
-
             <h3>Nicholas Limbert - HIERARCHICAL | QT</h3>
             <p>
                 Clustering analysis provides a means to classify similar molecular conformations into a limited number of district groups thereby reducing the amount of information to be manually analysed. A wide variety of readily available clustering algorithms have not been implemented and tested on highly flexible molecules such as carbohydrates.
@@ -680,9 +695,19 @@
             </p>
             <h3>Wen Kang Lu - HDBSCAN | UMAP</h3>
             <p>
-              *ToDo*
+                The Hierarchical Density-Based Spatial Clustering of Applications with Noise (HDBSCCAN) algorithm makes use of a density-based hierarchy where the most dominant clusters are extracted, i.e, it clusters based on regions of high data density and considers areas that are too sparse as noise.
+                The algorithm is relatively fast when compared to other clustering methods and has already seen experimentation in the field of biochemistry.
+                <br><br>
+                One issue with HDBSCAN, however, is that it suffers from "the curse of dimensionality".
+                The phenomenon is observed in the case where some high dimensional data has an insufficient amount of recorded data points.
+                When dimensionality becomes increasingly large, the amount of data required to form the same meaningful patterns and groups as lower dimensions increases at an exponential rate.
+                This occurs because the feature space itself increases exponentially, so the probability of two data points being similar experiences exponential decay - the data simply becomes too sparse.
+                Since each frame of an MD trajectory consists of a molecule’s locational data in a three dimensional space, the number of dimensions for a given frame is 3N, where N is the number of atoms present in the molecule.
+                Frames can often contain hundreds if not thousands of atoms, which gives rise to this phenomenon.
+                <br><br>
+                Uniform Manifold Approximation and Projection (UMAP) is a state-of-the-art dimensionality reduction technique. UMAP looks to estimate the underlying topology of some given data and project it to a manifold at some lower dimension, i.e., it aims to preserve as much of the variance explained in the original data while reducing its dimensional complexity.
             </p>
-            <h3>Robyn McKenzie - HDBSCAN | IMWKMEANS</h3>
+            <h3>Robyn McKenzie - HDBSCAN | IMWK-MEANS</h3>
             <p>
               *ToDo*
             </p>
@@ -702,12 +727,11 @@
           <p style="border-left: 3px solid #011B2A;
             padding-left: 10px;"> We developed a framework whereby the user can specify instructions, including the input file, algorithm and
             validation index, via command-line arguments. As the result of each clustering algorithm is dependent on the selection of the atoms
-            and frames to be clustered on, the framework includes preprocessing functions, to facilitate this, as well as post-processing
-            functions.
+            and frames to be clustered on, the framework includes preprocessing functions to facilitate this as well as post-processing functions.
             <br>
             The framework is structured as a pipeline to allow for additional algorithms, and other functionality, to be easily implemented at
-            a later stage. It is implemented in Python, as the majority of the existing packages we used are Python libraries. Additionally,
-            Python code is more easily understood than that of many other languages and will be simple to maintain and extend in the future.
+            a later stage. Python was selected as the programming language as it has access to many data science and machine learning libraries, including the algorithms needed.
+            Additionally, Python code is more easily understood than that of many other languages and will be simple to maintain and extend in the future.
           </p>
           </div>
           <div class="col-md-6 order-md-2" style="background-image: url(images/framework.png);min-height: 20rem;background-size:contain;background-repeat: no-repeat;">
@@ -1020,7 +1044,7 @@
                       <img src="images/robyn-profile.jpg" alt="profile-image" class="profile" />
                   </div>
                   <div class="card-content">
-                      <h2>Robyn McKenzie<small>HDBSCAN | iMWKMeans</small></h2>
+                      <h2>Robyn McKenzie<small>HDBSCAN | iMWK-Means</small></h2>
                       <div class="icon-block"><a href="https://github.com/robyn-kdm"><i class="fa fa-github"></i></a></div>
                   </div>
               </div>
