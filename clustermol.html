@@ -792,38 +792,30 @@
         <br>
 
         <div class="heading3">
-            <h3>Hierarchical and QT</h3>
+            <h3>Hierarchical and Quality Threshold</h3>
         </div>
         <br>
-        <p style="border-left: 3px solid #011B2A; padding-left: 10px;">
-            Due to the scope of the project, development was broken up into modules and protocols that could function as standalone programs. These programs would then function with the help of any relevant, previously developed modules that contributed to
-            it. The staging of the final product’s development was broken down into three distinct stages:
-        </p>
         <br>
         <div class="row no-gutters">
-            <div class="col-md-6 order-md-2" style="background-image: url(images/E-1.png);min-height: 54rem;background-repeat: no-repeat;background-size: contain;background-position: center;">
+            <div class="col-md-6 order-md-2" style="background-image: url(images/HH.png);min-height: 54rem;background-repeat: no-repeat;background-size: contain;background-position: center;">
             </div>
             <div class="col-md-6 align-self-center">
-                <h3>Stage 1 - Parser and storage protocols</h3>
-                <p>Stage 1 focused on creating the building blocks of the system, achieving the basic aims set out by the project sponsors and creating integration points for these building blocks, allowing them to be connected when integrating these blocks
-                    into tools developed in the future. This included developing protocols to parse raw Bayesian Network files, encode this data to summarized versions and finally storing all of this data in a Neo4j database.
+                <h3>Hierarchical Clustering</h3>
+                <p>The overall results obtained from the majority of hierarchical clustering for MenW and MenY indicate that no individual linkage criterion produces significantly better results. When inspecting the clusters visually through VMD it is evident that many clusters contain outliers and significantly different conformations. This would negatively impact the CVI’s values and indicate why the values are relatively poor. </p>
+                <p>The validation indices should only be used to compare results with an individual varying parameter, in our case this would be the linkage criteria. While this allows us to determine which linkage may be most suitable it does not thoroughly verify or validate our results. </p>
+                <p>Linkage criteria (Ward’s and average) that take multiple data points into account (compared to single and complete which only use single data points) produce significantly better results for all statistics. Our results demonstrate that some linkage criteria are more acceptable than others.
                 </p>
             </div>
         </div>
         <div class="row no-gutters">
             <div class="col-lg-6 align-self-center">
-                <h3>Stage 2 - Generic system</h3>
-                <p>Stage 2 focused on developing a general system that while not meeting the requirements of the stretch goal of the system, i.e. being a system tailored towards use with CS lecturers and potentially students, it did provide a general proof
-                    of concept for a Neo4j Bayesian Network powered system, as well as providing all the building blocks for future iterations. Meaning that any future studies into the use of Bayesian Network powered tools could utilise the stage 2 artefact
-                    as a basis for their code and simply customise it to their needs.</p>
-                <p>Users using the generic system, users are able to</p>
-                <ul>
-                    <li>Upload a raw .DNE Bayesian model file to be stored in the Neo4j database using the relevant parsing, encoding and storage protocols</li>
-                    <li>View all models already stored within the generic systems library</li>
-                    <li>Choose a model from the library and perform inference using this model by providing a set of model specific evidence </li>
-                </ul>
+                <h3>Quality Threshold Algorithm</h3>
+                <p>QT original produces the best results for MenW with a cutoff value of 3.5 Å. It has a high Calinski-Harabasz index, and a relatively low amount of noise compared to lower cutoff values. The vectorised version produces a smaller number of clusters for the same cutoff values. Overall the original version produces more favourable CVI values and cluster counts for all cutoff values when compared to the vectorised version. </p>
+                <p>MenY represents a more stable molecule as there is consistently an individual large cluster with one smaller yet significant cluster also present.  All evidence from both QT and QT vector suggests that there is a single dominant conformation present for MenY. Once again a cutoff value of 3.5Å for the original version produces more favourable CVI’s with a reduced amount of noise. </p>
+                <p>The S. flexneri molecules are highly flexible with many different conformations. S. flexneri 6 6R has many more atoms to cluster on compared to S. flexneri Y 3RU. Visual representations indicate that both algorithms can produce acceptable clusters of conformations provided the correct cutoff values are selected. </p>
             </div>
-            <div class="col-lg-6" style="background-image: url('images/E-2.png');min-height: 54rem;background-repeat: no-repeat;background-size: contain;background-position: center;"></div>
+            <div class="col-lg-6" style="background-image: url('images/QTQT.png');min-height: 54rem;background-repeat: no-repeat;background-size: contain;background-position: center;"></div>
+
         </div>
 
         <div class="heading3">
@@ -912,7 +904,7 @@
         <div class="row no-gutters">
 
             <div class="heading3">
-                <h3>Results and Conclusions</h3>
+                <h3>Conclusions</h3>
             </div>
             <br>
 
