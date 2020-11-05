@@ -53,7 +53,7 @@
     }
 
     .bg-grey {
-        background-color: #f6f6f6;
+        background-color: #F0F7F7;
     }
 
     .logo-small {
@@ -105,7 +105,7 @@
     }
 
     .panel {
-        border: 1px solid #011B2A;
+        border: 1px solid #044E4E;
         border-radius: 0 !important;
         transition: box-shadow 0.5s;
     }
@@ -115,14 +115,14 @@
     }
 
     .panel-footer .btn:hover {
-        border: 1px solid #011B2A;
+        border: 1px solid #044E4E;
         background-color: #fff !important;
-        color: #011B2A;
+        color: #044E4E;
     }
 
     .panel-heading {
         color: #fff !important;
-        background-color: #011B2A !important;
+        background-color: #044E4E !important;
         padding: 25px;
         border-bottom: 1px solid transparent;
         border-top-left-radius: 0px;
@@ -146,13 +146,13 @@
 
     .panel-footer .btn {
         margin: 15px 0;
-        background-color: #011B2A;
+        background-color: #044E4E;
         color: #fff;
     }
 
     .navbar {
         margin-bottom: 0;
-        background-color: #011B2A;
+        background-color: #008080;
         z-index: 99999;
         border: 0;
         font-size: 12px !important;
@@ -170,7 +170,7 @@
 
     .navbar-nav li a:hover,
     .navbar-nav li.active a {
-        color: #011B2A !important;
+        color: #044E4E !important;
         background-color: #fff !important;
     }
 
@@ -257,8 +257,8 @@
     .title {
         font-family: "Montserrat";
         text-align: center;
-        color: #011B2A;
-        background-color: #011B2A;
+        color: #044E4E;
+        background-color: #044E4E;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -270,7 +270,7 @@
     h1 {
         /* background-image: url(images/giphy.gif);
         background-size: cover; */
-        color: teal;
+        color: #008080;
         -moz-background-clip: text;
         -webkit-background-clip: text;
         text-transform: uppercase;
@@ -299,12 +299,12 @@
 
      ::-webkit-scrollbar {
         width: 8px;
-        background-color: #011B2A
+        background-color: #044E4E
     }
     /* Track */
 
      ::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 5px #011B2A;
+        box-shadow: inset 0 0 5px #044E4E;
         border-radius: 10px;
     }
     /* Handle */
@@ -353,7 +353,7 @@
         padding: 15px 25px;
         color: white;
         float: left;
-        background: #011B2A;
+        background: #044E4E;
         height: 50%;
         border-radius: 0 0 5px 5px;
         position: relative;
@@ -362,7 +362,7 @@
 
     .profile-card-3 .card-content::before {
         content: '';
-        background: #011B2A;
+        background: #044E4E;
         width: 120%;
         height: 100%;
         left: 11px;
@@ -619,7 +619,7 @@
                 <h3>Project Description</h3>
             </div>
             <br>
-            <p style="border-left: 3px solid #011B2A; padding-left: 10px;">
+            <p style="border-left: 3px solid #044E4E; padding-left: 10px;">
                 Molecular Dynamics (MD) simulates the behaviour of molecules which are allowed to interact with one another over a fixed period of time; it outputs what is known as a trajectory of the behaviour observed. This trajectory is a record of the movement of every atom during the simulation, with respective changes in position over time calculated by solving Newton’s equations of motion. Since the effects of molecular interactions occur so rapidly, positions are often updated at the femtosecond timescale. Therefore, trajectories containing even just a few nanoseconds worth of time frames amount to millions of locational data points to observe.
                 <br><br>
                 MD simulations play an important role for researchers interested in the effects molecular conformations can have in their applications, some of which include drug-receptor interaction and protein folding. Consequently, it is imperative that effective methods exist to gather insight from trajectories as efficiently as possible. A common way to do so is through the use of clustering algorithms that can partition the trajectory into a set of dominant conformations that are deemed structurally unique from one another. This project looks to explore different clustering techniques to cluster flexible carbohydrate molecules like polysaccharides.
@@ -633,7 +633,7 @@
                 <h3>Project goals</h3>
             </div>
             <br>
-            <p style="border-left: 3px solid #011B2A;
+            <p style="border-left: 3px solid #044E4E;
             padding-left: 10px;"> We aim to investigate and compare the performance of the various clustering algorithms to identify which are effective in clustering trajectories of flexible molecules, specifically, carbohydrate molecules. In addition, we investigate the use of dimensionality reduction techniques on the trajectory data and examine whether this improves clustering results. An effective clustering algorithm is one that generates high-quality clusters with good partitioning. This means that the clusters have high intra-cluster similarity and low inter-cluster similarity. Intra-cluster similarity indicates how well a cluster is formed and how similar the objects within a specific cluster are. The inter-cluster similarity is used to determine how dissimilar different clusters are from one another. This is also referred to as cluster separation. We aim to address the following research question: which clustering algorithms are most effective in clustering MD simulation data of highly flexible molecules? Each member has also outlined their individual research questions which pertain specifically to their contribution.
             </p>
             <br>
@@ -666,7 +666,7 @@
                 <h3>Background and Context</h3>
             </div>
             <br>
-            <p style="border-left: 3px solid #011B2A; padding-left: 10px;">
+            <p style="border-left: 3px solid #044E4E; padding-left: 10px;">
               Clustering analysis provides a means to classify similar molecular conformations into a limited number of district groups thereby reducing the amount of information to be manually analysed. A wide variety of readily available clustering algorithms have not been implemented and tested on highly flexible molecules such as carbohydrates.
             </p>
             <div class="row no-gutters">
@@ -705,7 +705,7 @@
         <br>
         <div class="row no-gutters">
           <div class="col-md-6 align-self-center">
-          <p style="border-left: 3px solid #011B2A;
+          <p style="border-left: 3px solid #044E4E;
             padding-left: 10px;"> We developed a framework whereby the user can specify instructions, including the input file, algorithm and validation index, via command-line arguments. As the result of each clustering algorithm is dependent on the selection of the atoms and frames to be clustered on, the framework includes preprocessing functions to facilitate this as well as post-processing functions.
             <br>
             The framework is structured as a pipeline to allow for additional algorithms, and other functionality, to be easily implemented at a later stage. Python was selected as the programming language as it has access to many data science and machine learning libraries, including the algorithms needed. Additionally, Python code is more easily understood than that of many other languages and will be simple to maintain and extend in the future.
@@ -760,7 +760,7 @@
             <h3>Results</h3>
         </div>
         <br>
-        <p style="border-left: 3px solid #011B2A;
+        <p style="border-left: 3px solid #044E4E;
           padding-left: 10px;"> The algorithms were applied to trajectories of four molecules - MenY, MenW, S.flexneri Y 3RU and S.flexneri 6 6RU.  MenY and MenW have a similar structure, but MenY is generally stable while MenW has been previously shown to visit multiple distinct conformations. Compared to MenW and MenY, S.flexneri Y 3RU and S.flexneri 6 6RU are substantially more flexible, and we expect it to exhibit a number of different conformations.
           <br>
           Almost all of the algorithms require one or two user-supplied parameters. In these cases the parameters had to be tuned by running the algorithms multiple times with different arguments.
@@ -796,7 +796,7 @@
             <h3>HDBSCAN and UMAP</h3>
         </div>
         <br>
-        <p style="border-left: 3px solid #011B2A; padding-left: 10px;">
+        <p style="border-left: 3px solid #044E4E; padding-left: 10px;">
             Below are comparisons between clustering (HDBSCAN) meningococcal W (MenW) with and without UMAP as a preprocessing step.
             Plots generated by UMAP is used to visualise how well the clusters were identified.
             Note that the cluster label -1 represents the noise cluster.
@@ -1014,7 +1014,7 @@
             </div>
               <div class="card profile-card-3">
                   <div class="background-block">
-                      <img src="images/nic-bg.png" alt="profile-sample1" class="background" />
+                      <img src="images/nic-bg.jpg" alt="profile-sample1" class="background" />
                   </div>
                   <div class="profile-thumb-block">
                       <img src="images/Nic.jpeg" alt="profile-image" class="profile" />
