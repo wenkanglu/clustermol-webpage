@@ -595,10 +595,10 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#Intro">Introduction</a></li>
-                    <li><a href="#Goals">Goals</a></li>
+                    <li><a href="#Intro">About</a></li>
                     <li><a href="#Background">Background</a></li>
-                    <li><a href="#About">System</a></li>
+                    <li><a href="#Framework">Framework</a></li>
+                    <li><a href="#Results">Results</a></li>
                     <li><a href="#Conclusions">Conclusions</a></li>
                     <li><a href="#Documents">Documents</a></li>
                     <li><a href="#Team">Team</a></li>
@@ -620,39 +620,21 @@
             </div>
             <br>
             <p style="border-left: 3px solid #011B2A; padding-left: 10px;">
-                Molecular Dynamics (MD) simulates the behaviour of molecules which are allowed to interact with one another over a fixed period of time; it outputs what is known as a trajectory of the behaviour observed.
-                This trajectory is a record of the movement of every atom during the simulation, with respective changes in position over time calculated by solving Newton’s equations of motion.
-                Since the effects of molecular interactions occur so rapidly, positions are often updated at the femtosecond timescale.
-                Therefore, trajectories containing even just a few nanoseconds worth of time frames amount to millions of locational data points to observe.
-           </p>
-           <br>
-           <p style="border-left: 3px solid #011B2A; padding-left: 10px;">
-                MD simulations play an important role for researchers interested in the effects molecular conformations can have in their applications, some of which include drug-receptor interaction and protein folding.
-                Consequently, it is imperative that effective methods exist to gather insight from trajectories as efficiently as possible.
-                A common way to do so is through the use of clustering algorithms that can partition the trajectory into a set of dominant conformations that are deemed structurally unique from one another.
-                This project looks to explore different clustering techniques to cluster flexible carbohydrate molecules like polysaccharides.
+                Molecular Dynamics (MD) simulates the behaviour of molecules which are allowed to interact with one another over a fixed period of time; it outputs what is known as a trajectory of the behaviour observed. This trajectory is a record of the movement of every atom during the simulation, with respective changes in position over time calculated by solving Newton’s equations of motion. Since the effects of molecular interactions occur so rapidly, positions are often updated at the femtosecond timescale. Therefore, trajectories containing even just a few nanoseconds worth of time frames amount to millions of locational data points to observe.
+                <br><br>
+                MD simulations play an important role for researchers interested in the effects molecular conformations can have in their applications, some of which include drug-receptor interaction and protein folding. Consequently, it is imperative that effective methods exist to gather insight from trajectories as efficiently as possible. A common way to do so is through the use of clustering algorithms that can partition the trajectory into a set of dominant conformations that are deemed structurally unique from one another. This project looks to explore different clustering techniques to cluster flexible carbohydrate molecules like polysaccharides.
             </p>
-            <br>
         </div>
     </div>
 
-    <!-- Container (About Section) -->
-    <div id="Goals" class="container-fluid p-0 " style="padding: 3em">
+    <div id="Goals" class="container-fluid p-0" style="padding: 3em">
         <div class="row no-gutters">
             <div class="heading3">
                 <h3>Project goals</h3>
             </div>
             <br>
             <p style="border-left: 3px solid #011B2A;
-            padding-left: 10px;"> We aim to investigate and compare the performance of the various clustering algorithms to identify which are effective in clustering trajectories of flexible molecules, specifically, carbohydrate molecules.
-            In addition, we investigate the use of dimensionality reduction techniques on the trajectory data and examine whether this improves clustering results.
-            An effective clustering algorithm is one that generates high-quality clusters with good partitioning.
-            This means that the clusters have high intra-cluster similarity and low inter-cluster similarity.
-            Intra-cluster similarity indicates how well a cluster is formed and how similar the objects within a specific cluster are.
-            The inter-cluster similarity is used to determine how dissimilar different clusters are from one another.
-            This is also referred to as cluster separation.
-            We aim to address the following research question: which clustering algorithms are most effective in clustering MD simulation data of highly flexible molecules?
-            Each member has also outlined their individual research questions which pertain specifically to their contribution.
+            padding-left: 10px;"> We aim to investigate and compare the performance of the various clustering algorithms to identify which are effective in clustering trajectories of flexible molecules, specifically, carbohydrate molecules. In addition, we investigate the use of dimensionality reduction techniques on the trajectory data and examine whether this improves clustering results. An effective clustering algorithm is one that generates high-quality clusters with good partitioning. This means that the clusters have high intra-cluster similarity and low inter-cluster similarity. Intra-cluster similarity indicates how well a cluster is formed and how similar the objects within a specific cluster are. The inter-cluster similarity is used to determine how dissimilar different clusters are from one another. This is also referred to as cluster separation. We aim to address the following research question: which clustering algorithms are most effective in clustering MD simulation data of highly flexible molecules? Each member has also outlined their individual research questions which pertain specifically to their contribution.
             </p>
             <br>
             <p>Nicholas Limbert - HIERARCHICAL | QT</p>
@@ -678,46 +660,45 @@
         </div>
     </div>
 
-
+    <!-- Container (Background Section) -->
     <div id="Background" class="container-fluid p-0 bg-grey" style="padding: 3em">
-        <div class="row no-gutters">
             <div class="heading3">
                 <h3>Background and Context</h3>
             </div>
             <br>
-            <h3>Nicholas Limbert - HIERARCHICAL | QT</h3>
-            <p>
-                Clustering analysis provides a means to classify similar molecular conformations into a limited number of district groups thereby reducing the amount of information to be manually analysed. A wide variety of readily available clustering algorithms have not been implemented and tested on highly flexible molecules such as carbohydrates.
-                <br><br>
-                Hierarchical clustering is a well-developed clustering technique with numerous resources available. We utilise four different linkage criteria for hierarchical clustering - single, complete, average and Ward’s method. These are standard, widely available methods that provide an intuitive understanding of how clusters are formed.
-                <br><br>
-                The Quality Threshold (QT) algorithm aims to generate high-quality clusters by iteratively adding observations to a cluster while not exceeding the pre-defined cluster diameter or threshold. Observations are added to minimise the cluster diameter. The Quality Threshold (QT) algorithm has previously been implemented for clustering a range of MD data, however, there are some inconsistencies related to certain implementations. We, therefore, aim to make use of the implementation from González-Alemán et al. which is in line with the originally proposed algorithm from Heyer et al. In addition, we make use of a vectorised version by Melvin et al in order to understand their differences and determine the effectiveness.
+            <p style="border-left: 3px solid #011B2A; padding-left: 10px;">
+              Clustering analysis provides a means to classify similar molecular conformations into a limited number of district groups thereby reducing the amount of information to be manually analysed. A wide variety of readily available clustering algorithms have not been implemented and tested on highly flexible molecules such as carbohydrates.
             </p>
-            <h3>Wen Kang Lu - HDBSCAN | UMAP</h3>
-            <p>
-                The Hierarchical Density-Based Spatial Clustering of Applications with Noise (HDBSCCAN) algorithm makes use of a density-based hierarchy where the most dominant clusters are extracted, i.e, it clusters based on regions of high data density and considers areas that are too sparse as noise.
-                The algorithm is relatively fast when compared to other clustering methods and has already seen experimentation in the field of biochemistry.
-                <br><br>
-                One issue with HDBSCAN, however, is that it suffers from "the curse of dimensionality".
-                The phenomenon is observed in the case where some high dimensional data has an insufficient amount of recorded data points.
-                When dimensionality becomes increasingly large, the amount of data required to form the same meaningful patterns and groups as lower dimensions increases at an exponential rate.
-                This occurs because the feature space itself increases exponentially, so the probability of two data points being similar experiences exponential decay - the data simply becomes too sparse.
-                Since each frame of an MD trajectory consists of a molecule’s locational data in a three dimensional space, the number of dimensions for a given frame is 3N, where N is the number of atoms present in the molecule.
-                Frames can often contain hundreds if not thousands of atoms, which gives rise to this phenomenon.
-                <br><br>
-                Uniform Manifold Approximation and Projection (UMAP) is a state-of-the-art dimensionality reduction technique. UMAP looks to estimate the underlying topology of some given data and project it to a manifold at some lower dimension, i.e., it aims to preserve as much of the variance explained in the original data while reducing its dimensional complexity.
-            </p>
-            <h3>Robyn McKenzie - HDBSCAN | IMWK-MEANS</h3>
-            <p>
-              *ToDo*
-            </p>
+            <div class="row no-gutters">
+                <h3>Hierarchical</h3>
+                <p>
+                  Hierarchical clustering is a well-developed clustering technique with numerous resources available. We utilise four different linkage criteria for hierarchical clustering - single, complete, average and Ward’s method. These are standard, widely available methods that provide an intuitive understanding of how clusters are formed.
+                </p>
 
-        </div>
+                <h3>Quality Threshold</h3>
+                <p>
+                  The Quality Threshold (QT) algorithm aims to generate high-quality clusters by iteratively adding observations to a cluster while not exceeding the pre-defined cluster diameter or threshold. Observations are added to minimise the cluster diameter. The Quality Threshold (QT) algorithm has previously been implemented for clustering a range of MD data, however, there are some inconsistencies related to certain implementations. We, therefore, aim to make use of the implementation from González-Alemán et al. which is in line with the originally proposed algorithm from Heyer et al. In addition, we make use of a vectorised version by Melvin et al. in order to understand their differences and determine the effectiveness.
+                </p>
+                <h3>iMWK-Means</h3>
+                <p>
+                  Intelligent Mincowski Weighted K-Means (iMWK-Means) is a k-means variant which does not require a desired cluster count, as it begins by overestimating the number of clusters. It is also deterministic, as it intelligently chooses initial centroids, rather than selecting random values. Although iMWK-Means cannot directly label instances as noise, as HDBSCAN can, it assigns higher weights to the instances closest to the centroids, and lower weights to those further away. The result of this is that noise and outliers have less of an impact on the final clustering.
+                </p>
+                <h3>HDBSCAN</h3>
+                <p>
+                  The Hierarchical Density-Based Spatial Clustering of Applications with Noise (HDBSCAN) algorithm makes use of a density-based hierarchy where the most dominant clusters are extracted, i.e, it clusters based on regions of high data density and separated by areas of lower data density. Data that cannot be placed in claster is labelled as noise. The algorithm is relatively fast when compared to other clustering methods and has already seen experimentation in the field of biochemistry.
+                <p>
+                </p>
+                  One issue with HDBSCAN, however, is that it suffers from "the curse of dimensionality". The phenomenon is observed in the case where some high dimensional data has an insufficient amount of recorded data points. When dimensionality becomes increasingly large, the amount of data required to form the same meaningful patterns and groups as lower dimensions increases at an exponential rate. This occurs because the feature space itself increases exponentially, so the probability of two data points being similar experiences exponential decay - the data simply becomes too sparse. Since each frame of an MD trajectory consists of a molecule’s locational data in a three dimensional space, the number of dimensions for a given frame is 3N, where N is the number of atoms present in the molecule. Frames can often contain hundreds if not thousands of atoms, which gives rise to this phenomenon.
+                </p>
+                <h3>UMAP</h3>
+                <p>
+                  Uniform Manifold Approximation and Projection (UMAP) is a state-of-the-art dimensionality reduction technique. UMAP looks to estimate the underlying topology of some given data and project it to a manifold at some lower dimension, i.e., it aims to preserve as much of the variance explained in the original data while reducing its dimensional complexity.
+                </p>
+              </div>
     </div>
 
-
-    <!-- Container (About Section) -->
-    <div id="About" class="container-fluid p-0 " style="padding: 3em">
+    <!-- Container (Framework Section) -->
+    <div id="Framework" class="container-fluid p-0" style="padding: 3em">
         <div class="heading3">
             <h3>Framework Design</h3>
         </div>
@@ -725,13 +706,9 @@
         <div class="row no-gutters">
           <div class="col-md-6 align-self-center">
           <p style="border-left: 3px solid #011B2A;
-            padding-left: 10px;"> We developed a framework whereby the user can specify instructions, including the input file, algorithm and
-            validation index, via command-line arguments. As the result of each clustering algorithm is dependent on the selection of the atoms
-            and frames to be clustered on, the framework includes preprocessing functions to facilitate this as well as post-processing functions.
+            padding-left: 10px;"> We developed a framework whereby the user can specify instructions, including the input file, algorithm and validation index, via command-line arguments. As the result of each clustering algorithm is dependent on the selection of the atoms and frames to be clustered on, the framework includes preprocessing functions to facilitate this as well as post-processing functions.
             <br>
-            The framework is structured as a pipeline to allow for additional algorithms, and other functionality, to be easily implemented at
-            a later stage. Python was selected as the programming language as it has access to many data science and machine learning libraries, including the algorithms needed.
-            Additionally, Python code is more easily understood than that of many other languages and will be simple to maintain and extend in the future.
+            The framework is structured as a pipeline to allow for additional algorithms, and other functionality, to be easily implemented at a later stage. Python was selected as the programming language as it has access to many data science and machine learning libraries, including the algorithms needed. Additionally, Python code is more easily understood than that of many other languages and will be simple to maintain and extend in the future.
           </p>
           </div>
           <div class="col-md-6 order-md-2" style="background-image: url(images/framework.png);min-height: 20rem;background-size:contain;background-repeat: no-repeat;background-position: center;">
@@ -740,62 +717,59 @@
         <div class="row no-gutters">
           <div class="col-lg-6 align-self-center">
               <h3>Input</h3>
-              <p> The program accepts a Protein Data Bank (.pdb) file as the input dataset. These files contain three-dimensional structures of
-                molecules and their change in conformation over a time period. This project is focused on clustering highly flexible molecules,
-                therefore we will use MD simulation data of carbohydrates. The user will provide the input file name as a command-line argument.
+              <p> The program accepts a Protein Data Bank (.pdb) file as the input dataset. These files contain three-dimensional structures of molecules and their change in conformation over a time period. This project is focused on clustering highly flexible molecules, therefore we will use MD simulation data of carbohydrates. The user will provide the input file name as a command-line argument.
               </p>
           </div>
           <div class="col-lg-6 align-self-center">
               <h3>Preprocessing</h3>
-              <p> The user may wish to preprocess the files. We implement features which allow atom selection, frame selection and frame
-                downsampling prior to clustering. The user may also generate new trajectory files from existing ones using these preprocessing
-                features. The preprocessing phase outputs the edited trajectory data in the format required by the clustering algorithm
-                implementations.
-                <br>
-                Dimensionality reduction in the form of UMAP is also considered as a preprocessing tool if used.
-                UMAP takes in a trajectory file and produces an array readable by the clustering algorithms.
-                This array has has lower dimensionality and is easier to work with.
+              <p>
+                The user may wish to preprocess the files. We implement features which allow atom selection, frame selection and frame downsampling prior to clustering. The user may also generate new trajectory files from existing ones using these preprocessing features. The preprocessing phase outputs the edited trajectory data in the format required by the clustering algorithm implementations.
+              </p>
+              <p>
+                Dimensionality reduction in the form of UMAP is also considered as a preprocessing tool if used. UMAP takes in a trajectory file and produces an array readable by the clustering algorithms. This array has has lower dimensionality and is easier to work with.
               </p>
           </div>
         </div>
         <div class="row no-gutters">
           <div class="col-lg-6 align-self-center">
               <h3>Clustering</h3>
-              <p> The preprocessed data is clustered with the algorithm specified by the user. The user has a range of clustering algorithms to
-                choose from. These include Hierarchical (various linkage criterion), Quality Threshold variations, HDBSCAN and iMWK-Means. All
-                clustering algorithms are configured to accept data in the format output by the preprocessing phase. The clustering output is also
-                uniform across each algorithm implementation so that the validation techniques and visualisation can be used.
+              <p>
+                The preprocessed data is clustered with the algorithm specified by the user. The user has a range of clustering algorithms to choose from. These include Hierarchical (various linkage criterion), Quality Threshold variations, HDBSCAN and iMWK-Means. All clustering algorithms are configured to accept data in the format output by the preprocessing phase. The clustering output is also uniform across each algorithm implementation so that the validation techniques and visualisation can be used.
               </p>
           </div>
           <div class="col-lg-6 align-self-center">
               <h3>Validation</h3>
-              <p> There are multiple validation measures available to the user. We recommend using multiple Cluster Validation Indices (CVIs).
-                If the user has specified a CVI, or set of CVIs, to be used, this will be applied to the output and results will be written to
-                a file. We have implemented the Calinski Harabasz, Davies-Bouldin and Silhouette indices as validation measures.
+              <p>
+                There are multiple validation measures available to the user. We recommend using multiple Cluster Validation Indices (CVIs). If the user has specified a CVI, or set of CVIs, to be used, this will be applied to the output and results will be written to a file. We have implemented the Calinski Harabasz, Davies-Bouldin and Silhouette indices as validation measures.
               </p>
           </div>
         </div>
         <div class="row no-gutters">
           <div class="col-lg-6 align-self-center">
               <h3>Clustering Output</h3>
-              <p> The preprocessed data is clustered with the algorithm specified by the user. The user has a range of clustering algorithms to
-                choose from. These include Hierarchical (various linkage criterion), Quality Threshold variations, HDBSCAN and iMWK-Means. All
-                clustering algorithms are configured to accept data in the format output by the preprocessing phase. The clustering output is also
-                uniform across each algorithm implementation so that the validation techniques and visualisation can be used.
+              <p>
+                The preprocessed data is clustered with the algorithm specified by the user. The user has a range of clustering algorithms to choose from. These include Hierarchical (various linkage criterion), Quality Threshold variations, HDBSCAN and iMWK-Means. All clustering algorithms are configured to accept data in the format output by the preprocessing phase. The clustering output is also uniform across each algorithm implementation so that the validation techniques and visualisation can be used.
               </p>
           </div>
-          <div class="col-lg-6 align-self-center">
-          </div>
         </div>
+    </div>
 
+    <!-- Container (Results Section) -->
+    <div id="Results" class="container-fluid p-0" style="padding: 3em">
+        <div class="heading3">
+            <h3>Results</h3>
+        </div>
         <br>
+        <p style="border-left: 3px solid #011B2A;
+          padding-left: 10px;"> The algorithms were applied to trajectories of four molecules - MenY, MenW, S.flexneri Y 3RU and S.flexneri 6 6RU.  MenY and MenW have a similar structure, but MenY is generally stable while MenW has been previously shown to visit multiple distinct conformations. Compared to MenW and MenY, S.flexneri Y 3RU and S.flexneri 6 6RU are substantially more flexible, and we expect it to exhibit a number of different conformations.
+          <br>
+          Almost all of the algorithms require one or two user-supplied parameters. In these cases the parameters had to be tuned by running the algorithms multiple times with different arguments.
+        </p>
         <br>
-
         <div class="heading3">
             <h3>Hierarchical and Quality Threshold</h3>
         </div>
-        <br>
-        <br>
+        <br><br>
         <div class="row no-gutters">
             <div class="col-md-6 order-md-2" style="background-image: url(images/HH.png);min-height: 54rem;background-repeat: no-repeat;background-size: contain;background-position: center;">
             </div>
@@ -865,53 +839,43 @@
         </div>
 
         <div class="heading3">
-            <h3>HDBSCAN and IMWK-Means</h3>
+          <h3>HDBSCAN and IMWK-Means</h3>
         </div>
         <br>
-        <p style="border-left: 3px solid #011B2A; padding-left: 10px;">
-            Due to the scope of the project, development was broken up into modules and protocols that could function as standalone programs. These programs would then function with the help of any relevant, previously developed modules that contributed to
-            it. The staging of the final product’s development was broken down into three distinct stages:
-        </p>
-        <br>
         <div class="row no-gutters">
-            <div class="col-md-6 order-md-2" style="background-image: url(images/E-1.png);min-height: 54rem;background-repeat: no-repeat;background-size: contain;background-position: center;">
+            <div class="col-md-6 order-md-2" style="background-image: url(images/hdbscan-imwkmeans.png);min-height: 55rem;background-repeat: no-repeat;background-size: contain;background-position: center;">
             </div>
             <div class="col-md-6 align-self-center">
-                <h3>Stage 1 - Parser and storage protocols</h3>
-                <p>Stage 1 focused on creating the building blocks of the system, achieving the basic aims set out by the project sponsors and creating integration points for these building blocks, allowing them to be connected when integrating these blocks
-                    into tools developed in the future. This included developing protocols to parse raw Bayesian Network files, encode this data to summarized versions and finally storing all of this data in a Neo4j database.
+                <h3>HDBSCAN</h3>
+                <p>
+                  The fact that HDBSCAN can disregard frames as noise means that it can produce cohesive clusters containing only highly similar frames. For MenY, it identifies a single dominant cluster which is well-formed as it contains few frames which stray from the concentrated area. For MenW, it identifies four distinct clusters, however, a large proportion of frames (28%) have been labelled as noise. Ideally, it is preferable for as few frames to be labelled as noise as possible. If more frames are conserved and placed into clusters, the result is a more complete picture of the conformations of the molecule.
+                </p>
+                <p>
+                  The clusters produced by HDBSCAN for MenW and MenY indicate the difference in stability between MenY, with a single conformation, and MenW, with multiple conformations. The single MenY cluster also bares resemblence to the second MenW cluster. As the two molecules are similar in structure, it makes sense that they will assume a similar conformation some of the time, despite the obvious difference in their respectiveness levels of stability.
                 </p>
             </div>
         </div>
         <div class="row no-gutters">
-            <div class="col-lg-6 align-self-center">
-                <h3>Stage 2 - Generic system</h3>
-                <p>Stage 2 focused on developing a general system that while not meeting the requirements of the stretch goal of the system, i.e. being a system tailored towards use with CS lecturers and potentially students, it did provide a general proof
-                    of concept for a Neo4j Bayesian Network powered system, as well as providing all the building blocks for future iterations. Meaning that any future studies into the use of Bayesian Network powered tools could utilise the stage 2 artefact
-                    as a basis for their code and simply customise it to their needs.</p>
-                <p>Users using the generic system, users are able to</p>
-                <ul>
-                    <li>Upload a raw .DNE Bayesian model file to be stored in the Neo4j database using the relevant parsing, encoding and storage protocols</li>
-                    <li>View all models already stored within the generic systems library</li>
-                    <li>Choose a model from the library and perform inference using this model by providing a set of model specific evidence </li>
-                </ul>
-            </div>
-            <div class="col-lg-6" style="background-image: url('images/E-2.png');min-height: 54rem;background-repeat: no-repeat;background-size: contain;background-position: center;"></div>
+            <h3>iMWK-Means</h3>
+            <p>
+              As iMWK-Means cannot classify frames as noise, the clusters it produced often include more frame variation than HDBSCAN. This is because all frames, even those which may be outliers, must be placed in a cluster. In the case of MenW, iMWK-Means identifies three distinct clusters, however they are not as distinct as the four clusters produced by HDBSCAN and contain more variance. As the HDBSCAN clusters to not account for all of the data, due to the high proportion classfied as noise, the iMWK-Means clusters can be analysed for a more complete overview of the molecule, althought the quality of the clusters is not as good.
+            </p>
+            <p>
+              For molecules that are generally stable, such as MenY, iMWK-Means can detect subtle differences that HDBSCAN does not
+            </p>
         </div>
     </div>
 
-    <div id="Conclusions" class="container-fluid p-0 bg-grey">
+    <!-- Container (Conclusions Section) -->
+    <div id="Conclusions" class="container-fluid p-0 bg-grey" style="padding: 3em">
         <div class="row no-gutters">
-
             <div class="heading3">
                 <h3>Conclusions</h3>
             </div>
             <br>
-
             <h3>Multi-data point linkage criteria produce better results compared to single linkage criteria.</h3>
             <p>
                 Hierarchical clustering is unable to classify noise separately, however, it is still able to produce clusters with relatively good CVI values. A limitation to Hierarchical clustering is that it requires prior knowledge about the number of conformations within a simulation. This information is usually not available unless prior research has been conducted on the specified data set. As expected, single linkage is unable to produce clusters of significance and merges most frames into one cluster. Complete, however can produce reasonable results given that only individual data points are taken into account when merging clusters. Complete also has better CVI values and a greater cluster count spread to those produced by single linkage. Ward’s method and average linkage produce much better results in comparison to single and complete linkages. Linkage criteria (Ward’s and average) that take multiple data points into account produce significantly better results and should be implemented when using Hierarchical clustering.
-
             </p>
             <h3>Quality Threshold produces good clusters for highly flexible molecules.</h3>
             <p>
@@ -927,15 +891,19 @@
                 These findings suggest that using UMAP as a preprocessing step greatly benefits the clustering of MD trajectories with HDBSCAN, as it no longer suffers from sparse data resulting from high dimensionality.
             </p>
 
-            <h3>Addtional Results #2</h3>
-            <p>ToDo</p>
+            <h3>iMWK-Means can detect subtle conformational differences that HDBSCAN cannot.</h3>
+            <p>
+              ToDo
+            </p>
 
-            <h3>Addtional Results #3</h3>
-            <p>To</p>
+            <h3>HDBSCAN produces clusters with high cohesion because it can disregard noisy frames.</h3>
+            <p>
+              ToDo
+            </p>
         </div>
     </div>
 
-    <!-- Container (documents Section) -->
+    <!-- Container (Documents Section) -->
     <div id="Documents" class="container-fluid text-center">
       <div class="heading3">
           <h3>Documents</h3>
@@ -1036,11 +1004,9 @@
 
         </div>
     </div>
-    </div>
-    </div>
 
     <!-- Container (Team Section) -->
-    <div id="Team" class="container-fluid text-center  bg-grey">
+    <div id="Team" class="container-fluid text-center bg-grey">
         <h2>Team</h2>
         <div class="row">
           <div class="col-md-4">
