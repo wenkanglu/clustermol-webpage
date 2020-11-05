@@ -685,7 +685,7 @@
                 </p>
                 <h3>HDBSCAN</h3>
                 <p>
-                  The Hierarchical Density-Based Spatial Clustering of Applications with Noise (HDBSCAN) algorithm makes use of a density-based hierarchy where the most dominant clusters are extracted, i.e, it clusters based on regions of high data density and separated by areas of lower data density. Data that cannot be placed in claster is labelled as noise. The algorithm is relatively fast when compared to other clustering methods and has already seen experimentation in the field of biochemistry.
+                  The Hierarchical Density-Based Spatial Clustering of Applications with Noise (HDBSCAN) algorithm makes use of a density-based hierarchy where the most dominant clusters are extracted, i.e, it clusters based on regions of high data density and separated by areas of lower data density. Data that cannot be placed in clusters is labelled as noise. The algorithm is relatively fast when compared to other clustering methods and has already seen experimentation in the field of biochemistry.
                 <p>
                 </p>
                   One issue with HDBSCAN, however, is that it suffers from "the curse of dimensionality". The phenomenon is observed in the case where some high dimensional data has an insufficient amount of recorded data points. When dimensionality becomes increasingly large, the amount of data required to form the same meaningful patterns and groups as lower dimensions increases at an exponential rate. This occurs because the feature space itself increases exponentially, so the probability of two data points being similar experiences exponential decay - the data simply becomes too sparse. Since each frame of an MD trajectory consists of a molecule’s locational data in a three dimensional space, the number of dimensions for a given frame is 3N, where N is the number of atoms present in the molecule. Frames can often contain hundreds if not thousands of atoms, which gives rise to this phenomenon.
@@ -717,7 +717,9 @@
         <div class="row no-gutters">
           <div class="col-lg-6 align-self-center">
               <h3>Input</h3>
-              <p> The program accepts a Protein Data Bank (.pdb) file as the input dataset. These files contain three-dimensional structures of molecules and their change in conformation over a time period. This project is focused on clustering highly flexible molecules, therefore we will use MD simulation data of carbohydrates. The user will provide the input file name as a command-line argument.
+              <p> The program accepts a Protein Data Bank (.pdb) file as the input dataset. These files contain three-dimensional structures of molecules and their change in conformation over a time period.
+                  <br><br>
+                This project is focused on clustering highly flexible molecules, therefore we will use MD simulation data of carbohydrates. The user will provide the input file name as a command-line argument.
               </p>
           </div>
           <div class="col-lg-6 align-self-center">
@@ -748,7 +750,7 @@
           <div class="col-lg-6 align-self-center">
               <h3>Clustering Output</h3>
               <p>
-                The preprocessed data is clustered with the algorithm specified by the user. The user has a range of clustering algorithms to choose from. These include Hierarchical (various linkage criterion), Quality Threshold variations, HDBSCAN and iMWK-Means. All clustering algorithms are configured to accept data in the format output by the preprocessing phase. The clustering output is also uniform across each algorithm implementation so that the validation techniques and visualisation can be used.
+                The output from each clustering job includes a text file with cluster labels per frame that allows the user to see which frames have been placed in which cluster. The CVI results, noise counts, cluster counts and atom selection statements are also written to a text file. In addition, the user may also specify whether they want to output the largest 𝑛 clusters to .pdb files. This allows the user to easily view the dominant confirmations using trajectory visualisation tools such as VMD.
               </p>
           </div>
         </div>
