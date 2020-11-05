@@ -667,7 +667,7 @@
             </div>
             <br>
             <p style="border-left: 3px solid #044E4E; padding-left: 10px;">
-              Clustering analysis provides a means to classify similar molecular conformations into a limited number of district groups thereby reducing the amount of information to be manually analysed. A wide variety of readily available clustering algorithms have not been implemented and tested on highly flexible molecules such as carbohydrates.
+              Clustering analysis provides a means to classify similar molecular conformations into a limited number of distinct groups thereby reducing the amount of information to be manually analysed. A wide variety of readily available clustering algorithms have not been tested on highly flexible molecules.
             </p>
             <div class="row no-gutters">
                 <h3>Hierarchical</h3>
@@ -863,7 +863,7 @@
               As iMWK-Means cannot classify frames as noise, the clusters it produced often include more frame variation than HDBSCAN. This is because all frames, even those which may be outliers, must be placed in a cluster. In the case of MenW, iMWK-Means identifies three distinct clusters, however they are not as distinct as the four clusters produced by HDBSCAN and contain more variance. As the HDBSCAN clusters to not account for all of the data, due to the high proportion classfied as noise, the iMWK-Means clusters can be analysed for a more complete overview of the molecule, althought the quality of the clusters is not as good.
             </p>
             <p>
-              For molecules that are generally stable, such as MenY, iMWK-Means can detect subtle differences that HDBSCAN does not
+              For molecules that are generally stable iMWK-Means can detect subtle differences that HDBSCAN does not. This is evident in the results for MenY, where iMWK-Means produces two clusters with a subtle difference.
             </p>
         </div>
     </div>
@@ -895,12 +895,12 @@
 
             <h3>iMWK-Means can detect subtle conformational differences that HDBSCAN cannot.</h3>
             <p>
-              ToDo
+              iMWK-Means is useful for detecting finer details in generally stable molecules, and was able to detect a difference in conformation for MenY where HDBSCAN could not. Although iMWK-Means can also produce useful clusters for less stable molecules, in these cases it will work well with HDBSCAN, as HDBSCAN produces more distinct clusters with lower variance.
             </p>
 
             <h3>HDBSCAN produces clusters with high cohesion because it can disregard noisy frames.</h3>
             <p>
-              ToDo
+              HDBSCAN can produce clusters with low variation due to its ability to detect and classify noise. This means that it can produce highly cohesive clusters. However, for less stable molecules, a large proportion of frames can be labelled as noise. Once again using HDBSCAN with iMWK-Means can be helpful, as iMWK-Means does not classify frames as noise. The iMWK-Means clusters will therefore account for all of the frames, including those that HDBSCAN classified as noise.
             </p>
         </div>
     </div>
@@ -1071,9 +1071,7 @@
         </div>
     </div>
 
-
     <!-- Footer -->
-
     <footer class="container-fluid text-center bg-grey ">
         <a href="#clustermol" title="To Top">
             <i class="fa fa-angle-double-up" style="font-size: 32px; color: black;"></i>
